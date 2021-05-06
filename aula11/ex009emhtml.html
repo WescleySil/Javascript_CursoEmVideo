@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Turista Check</title>
+    <style>
+        body {
+            background-color: #000;
+            word-spacing:  2px;
+            font: bold 20px Arial;
+            color: #fff;
+        }
+        div#nome{
+            margin-top: 20;
+        }
+        input#button{
+            font: Bold 20px Arial;
+            color: rgba(0, 0, 0, 0.849);
+            background-color: blue;
+            background-image: linear-gradient(to right, blue, rgba(100, 100, 255, 0.746));
+            border-radius: 50px;
+            height: 40px;
+            border: none;
+            cursor: pointer;
+        }
+        input#paisnome{
+            font: bold 20px Arial;
+            background-color: rgba(245, 245, 245, 0.801);
+            border-radius: 10px;
+            height: 200;
+            width: 150px;
+            margin-left: 10px;
+        }
+        input:focus,
+        select:focus,
+        textarea:focus,
+        button:focus {
+        outline: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Veja já sua nacionalidade</h1>
+    Digite aqui seu país:<input type="text" name="paisnome" id="paisnome">
+    <input type="button" value="Confirmar" id = 'button' onclick="confirmar()">
+    <div id= 'nome'>
+    <script>
+        function confirmar(){
+        var paisn = document.getElementById('paisnome')
+        var nome = document.getElementById('nome')
+        var verinac = paisn.value
+            if(verinac == `Brasil`){
+            nome.innerHTML = `<p>Você é Brasileiro</p>`
+            nome.innerHTML += `<p>Seja bem vindo ao nosso site.</p>`
+        }else{
+            nome.innerHTML = `<p>Você é Estrangeiro</p>`
+            nome.innerHTML += `<p>Welcome to our site.<br><br>Seja bem vindo ao nosso site.</br></p>`
+        }
+    }
+    </script>
+</body>
+</html>

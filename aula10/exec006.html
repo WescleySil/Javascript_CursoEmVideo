@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width= , initial-scale=1.0">
+    <title>Interações</title>
+    <style>
+        div#area {
+            font: normal 15px Arial;
+            background-color: green;
+            color: rgba(0, 0, 0, 0.891);
+            width:  200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id = "area">
+        O que o but vai fazer
+    </div>
+
+    <script>
+        var a = document.getElementById("area")
+        a.addEventListener('click', clicar)
+        a.addEventListener('mouseenter', entrar)
+        a.addEventListener('mouseout', sair)
+        function clicar(){
+            area.innerText = 'O but apertou o botao'
+            a.style.background = 'red'
+        }
+        function entrar(){
+            area.innerText = 'O but quer apertar oiakkk'
+        }
+        function sair(){
+            area.innerText = 'O but quer apertar nãokkk'
+            a.style.background = 'green'
+        }
+
+    </script>
+</body>
+</html>
